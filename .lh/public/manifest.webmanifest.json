@@ -1,0 +1,18 @@
+{
+    "sourceFile": "public/manifest.webmanifest",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1787045475642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1787045475642,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"འབྲུག་གི་ས་གནས་ཀྱི་མིང་།\",\n  \"short_name\": \"Bhutan Places\",\n  \"description\": \"Search standardized English and Dzongkha place names of Bhutan.\",\n  \"start_url\": \"/Bhutan-Standard-Place-Names/\",\n  \"scope\": \"/Bhutan-Standard-Place-Names/\",\n  \"display\": \"standalone\",\n  \"background_color\": \"#f8f5ef\",\n  \"theme_color\": \"#7b1f27\",\n  \"orientation\": \"portrait-primary\",\n  \"icons\": [\n    {\n      \"src\": \"logo.png\",\n      \"sizes\": \"1254x1254\",\n      \"type\": \"image/png\",\n      \"purpose\": \"any maskable\"\n    }\n  ]\n}\n"
+        }
+    ]
+}

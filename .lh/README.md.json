@@ -1,0 +1,18 @@
+{
+    "sourceFile": "README.md",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1787045481169,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1787045481169,
+            "name": "Commit-0",
+            "content": "# Bhutan Standard Place Names\n\nOffline-capable web app for searching standardized English and Dzongkha place names from `Places names of bhutan.xlsx`.\n\n## Run\n\n```sh\npython3 scripts/import_data.py\npython3 -m http.server 5173\n```\n\nOpen `http://localhost:5173`.\n\n## Test\n\n```sh\npython3 -m unittest discover -s tests\n```\n\n`npm run import-data`, `npm test`, `npm run dev`, and `npm run build` are also defined for environments with Node/npm available.\n\n## Update The Dataset\n\n1. Replace `Places names of bhutan.xlsx` with the new workbook.\n2. Run `python3 scripts/import_data.py`.\n3. Review `public/data/data-validation-report.json`.\n4. Run `python3 -m unittest discover -s tests`.\n5. Deploy the static files in this folder.\n\nThe import keeps the workbook untouched, writes public JSON under `public/data/`, and excludes private Tshogpa, CID, mobile, phone, and contact-style fields from the app data and search index.\n\n## Generated Data\n\n- `public/data/places.json`: normalized public place records\n- `public/data/hierarchy.json`: Dzongkhag, Gewog, Chiwog, and Village browse hierarchy\n- `public/data/config.json`: app name, source metadata, and summary statistics\n- `public/data/data-validation-report.json`: counts, missing values, duplicates, workbook profile, and privacy exclusions\n\n## Notes\n\nThe app uses hash routes so it can be hosted as static files without server-side routing. Search runs entirely in the browser after the JSON dataset loads, and the service worker caches app shell and data files for offline use after the first successful visit.\n\nNote: the original Excel workbook containing raw source data has been removed from the repository to avoid publishing private data. If you need to re-generate the public JSON dataset, keep a local copy of `Places names of bhutan.xlsx` outside this repo and run `python3 scripts/import_data.py` locally.\n"
+        }
+    ]
+}

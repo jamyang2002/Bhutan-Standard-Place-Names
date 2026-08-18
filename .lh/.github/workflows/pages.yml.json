@@ -1,0 +1,18 @@
+{
+    "sourceFile": ".github/workflows/pages.yml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1787045082931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1787045082931,
+            "name": "Commit-0",
+            "content": "name: Deploy GitHub Pages from public/\n\non:\n  push:\n    branches: [ main ]\n\njobs:\n  build-and-deploy:\n    runs-on: ubuntu-latest\n    permissions:\n      contents: read\n      pages: write\n      id-token: write\n\n    steps:\n      - name: Checkout repository\n        uses: actions/checkout@v4\n\n      - name: Configure Pages\n        uses: actions/configure-pages@v3\n\n      - name: Upload artifact (public directory)\n        uses: actions/upload-pages-artifact@v1\n        with:\n          path: public\n\n      - name: Deploy to GitHub Pages\n        uses: actions/deploy-pages@v1\n"
+        }
+    ]
+}

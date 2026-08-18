@@ -1,0 +1,18 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1787045419475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1787045419475,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"bhutan-standard-place-names\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"description\": \"Offline-capable PWA for searching standardized Bhutan place names.\",\n  \"scripts\": {\n    \"import-data\": \"python3 scripts/import_data.py\",\n    \"test\": \"python3 -m unittest discover -s tests\",\n    \"dev\": \"vite\",\n    \"build\": \"vite build\",\n    \"preview\": \"vite preview --port 5173\"\n  },\n  \"devDependencies\": {\n    \"vite\": \"^5.0.0\"\n  },\n  \"keywords\": [\n    \"bhutan\",\n    \"place-names\",\n    \"pwa\",\n    \"dzongkha\"\n  ],\n  \"license\": \"UNLICENSED\"\n}\n"
+        }
+    ]
+}

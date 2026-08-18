@@ -1,0 +1,18 @@
+{
+    "sourceFile": ".gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1787045420270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1787045420270,
+            "name": "Commit-0",
+            "content": "node_modules/\ndist/\n.DS_Store\nPlaces names of bhutan.xlsx\n"
+        }
+    ]
+}

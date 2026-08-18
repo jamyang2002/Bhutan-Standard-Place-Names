@@ -39,3 +39,5 @@ The import keeps the workbook untouched, writes public JSON under `public/data/`
 ## Notes
 
 The app uses hash routes so it can be hosted as static files without server-side routing. Search runs entirely in the browser after the JSON dataset loads, and the service worker caches app shell and data files for offline use after the first successful visit.
+
+Note: the original Excel workbook containing raw source data has been removed from the repository to avoid publishing private data. If you need to re-generate the public JSON dataset, keep a local copy of `Places names of bhutan.xlsx` outside this repo and run `python3 scripts/import_data.py` locally.

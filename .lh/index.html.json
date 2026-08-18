@@ -1,0 +1,18 @@
+{
+    "sourceFile": "index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1787045471447,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1787045471447,
+            "name": "Commit-0",
+            "content": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>འབྲུག་གི་ས་གནས་ཀྱི་མིང་།</title>\n    <meta name=\"description\" content=\"Find standardized English and Dzongkha place names of Bhutan from the source dataset.\" />\n    <meta property=\"og:title\" content=\"འབྲུག་གི་ས་གནས་ཀྱི་མིང་།\" />\n    <meta property=\"og:description\" content=\"Search standardized English and Dzongkha place names of Bhutan.\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta name=\"theme-color\" content=\"#7b1f27\" />\n    <link rel=\"preload\" href=\"./Font/Joyig.ttf\" as=\"font\" type=\"font/ttf\" crossorigin />\n    <link rel=\"preload\" href=\"./Font/DDC_Uchen.ttf\" as=\"font\" type=\"font/ttf\" crossorigin />\n    <link rel=\"preload\" href=\"./logo.png\" as=\"image\" />\n    <link rel=\"manifest\" href=\"./manifest.webmanifest\" />\n    <link rel=\"icon\" href=\"./logo.png\" />\n    <link rel=\"stylesheet\" href=\"./src/styles.css\" />\n  </head>\n  <body>\n    <div id=\"app\" class=\"app-shell\">\n      <section class=\"splash-screen\" aria-label=\"Loading Bhutan Standard Place Names\">\n        <img src=\"./logo.png\" alt=\"\" />\n        <h1>འབྲུག་གི་ས་གནས་ཀྱི་མིང་།</h1>\n        <p>Bhutan Standard Place Names</p>\n      </section>\n    </div>\n    <script type=\"module\" src=\"./src/app.js\"></script>\n  </body>\n</html>\n"
+        }
+    ]
+}
