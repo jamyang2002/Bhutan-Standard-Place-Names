@@ -1,6 +1,12 @@
+// Serve public assets from the server root. Vite serves `public/` at `/`.
 const ASSET_BASE = location.pathname.endsWith("/") ? location.pathname.slice(0, -1) : location.pathname.replace(/\/[^/]*$/, "");
-const assetPath = (path) => `${ASSET_BASE}${path}`;
-const DATA_BASE = assetPath("/public/data");
+const assetPath = (path) => {
+  // If an absolute path is provided, return it as-is so public files resolve at the server root.
+  if (path.startsWith("/")) return path;
+  return `${ASSET_BASE}${path}`;
+};
+// Public data is served at `/data` (not `/public/data`) by Vite's dev/preview server.
+const DATA_BASE = "/data";
 const ROUTE_PREFIX = "#";
 const APP_TITLE_DZ = "འབྲུག་གི་ས་གནས་ཀྱི་མིང་།";
 const state = {
