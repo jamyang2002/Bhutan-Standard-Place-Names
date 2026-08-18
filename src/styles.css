@@ -1,12 +1,12 @@
 @font-face {
   font-family: "DDC Joyig";
-  src: url("/Font/Joyig.ttf") format("truetype");
+  src: url("../Font/Joyig.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "DDC UChen";
-  src: url("/Font/DDC_Uchen.ttf") format("truetype");
+  src: url("../Font/DDC_Uchen.ttf") format("truetype");
   font-display: swap;
 }
 
