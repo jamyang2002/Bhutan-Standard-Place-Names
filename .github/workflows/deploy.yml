@@ -33,8 +33,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Upload artifact (dist)
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
@@ -45,10 +48,8 @@ jobs:
     permissions:
       pages: write
       id-token: write
-      contents: read
     environment:
       name: github-pages
-      url: https://jamyang2002.github.io/Bhutan-Standard-Place-Names/
     steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
