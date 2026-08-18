@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://jamyang2002.github.io/bhutan-standard-place-names/sitemap.xml

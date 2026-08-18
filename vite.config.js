@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 
-// Set base to the repository subpath so assets resolve on GitHub Pages
+// Use relative asset paths so the app works from GitHub Pages, local previews,
+// and any static subdirectory without hardcoding the repository name.
 export default defineConfig({
-  base: '/Bhutan-Standard-Place-Names/',
+  base: './',
 });

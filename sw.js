@@ -1,20 +1,15 @@
-const CACHE = "bhutan-place-names-v5";
+const CACHE = "bhutan-place-names-v6";
 const SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, "");
 const scoped = (path) => `${SCOPE_PATH}${path}`;
 const ASSETS = [
   scoped("/"),
   scoped("/index.html"),
-  scoped("/src/app.js"),
-  scoped("/src/styles.css"),
-  scoped("/logo.png"),
-  scoped("/Font/Joyig.ttf"),
-  scoped("/Font/DDC_Uchen.ttf"),
-  scoped("/public/manifest.webmanifest"),
-  scoped("/public/icons/icon.svg"),
-  scoped("/public/data/places.json"),
-  scoped("/public/data/hierarchy.json"),
-  scoped("/public/data/config.json"),
-  scoped("/public/data/data-validation-report.json")
+  scoped("/manifest.webmanifest"),
+  scoped("/icons/icon.svg"),
+  scoped("/data/places.json"),
+  scoped("/data/hierarchy.json"),
+  scoped("/data/config.json"),
+  scoped("/data/data-validation-report.json")
 ];
 
 self.addEventListener("install", (event) => {

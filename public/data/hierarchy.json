@@ -3982,7 +3982,7 @@
           {
             "name": "Metap Goenpa Maed",
             "dzongkhaName": "ཇོ་ཞིང་ཁ་_སྨད་བཏབ་_སྨད།",
-            "romanizedName": "Dangräbû Tö",
+            "romanizedName": "Pangna_Patala",
             "code": "21005",
             "slug": "metap-goenpa-maed",
             "villages": [
@@ -8000,7 +8000,7 @@
                 "id": "place-New-10",
                 "name": "Bjishong",
                 "existingName": "New",
-                "dzongkhaName": "གདང་རས་སྦུག་ སྟོད།",
+                "dzongkhaName": "སྤང་ན་ སྟོད།",
                 "code": "New",
                 "slug": "bjishong-new"
               },
@@ -8287,7 +8287,7 @@
             "id": "place-New-10",
             "name": "Bjishong",
             "existingName": "New",
-            "dzongkhaName": "གདང་རས་སྦུག་ སྟོད།",
+            "dzongkhaName": "སྤང་ན་ སྟོད།",
             "code": "New",
             "slug": "bjishong-new"
           },
@@ -33002,7 +33002,7 @@
                 "id": "place-New-11",
                 "name": "Yangmalashing",
                 "existingName": "New",
-                "dzongkhaName": "གདང་རས་སྦུག་ སྟོད།",
+                "dzongkhaName": "སྤང་ན་ སྟོད།",
                 "code": "New",
                 "slug": "yangmalashing-new"
               }
@@ -33147,7 +33147,7 @@
             "id": "place-New-11",
             "name": "Yangmalashing",
             "existingName": "New",
-            "dzongkhaName": "གདང་རས་སྦུག་ སྟོད།",
+            "dzongkhaName": "སྤང་ན་ སྟོད།",
             "code": "New",
             "slug": "yangmalashing-new"
           },
@@ -60118,14 +60118,14 @@
         "name": "Kanglung",
         "existingName": "Kanglung",
         "dzongkhaName": "བཀང་ལུང་།",
-        "romanizedName": "Dunglagang",
+        "romanizedName": "Drujegang",
         "code": "1503",
         "slug": "kanglung",
         "chiwogs": [
           {
             "name": "Menthong",
             "dzongkhaName": "སྨན་མཐོང་།",
-            "romanizedName": "Dangräbû Tö",
+            "romanizedName": "Pangna_Patala",
             "code": "150301",
             "slug": "menthong",
             "villages": [
@@ -62311,7 +62311,7 @@
           {
             "name": "Merak Toed",
             "dzongkhaName": "མེ་རག་སྟོད།",
-            "romanizedName": "Dangräbû Tö",
+            "romanizedName": "Pangna_Patala",
             "code": "150705",
             "slug": "merak-toed",
             "villages": [
@@ -63666,7 +63666,7 @@
           {
             "name": "Kapang_Yenangbrangsa",
             "dzongkhaName": "ཀ་པང་_ཡེ་ནང་བྲང་ས།",
-            "romanizedName": "Dangräbû Tö",
+            "romanizedName": "Pangna_Patala",
             "code": "151203",
             "slug": "kapang-yenangbrangsa",
             "villages": [

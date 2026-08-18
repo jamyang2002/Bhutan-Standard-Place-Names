@@ -2,14 +2,28 @@
 
 Offline-capable web app for searching standardized English and Dzongkha place names from `Places names of bhutan.xlsx`.
 
+## Live App
+
+https://jamyang2002.github.io/bhutan-standard-place-names/
+
+## Install
+
+After the site opens once, it can be installed like an app and used offline.
+
+- Desktop Chrome/Edge: open the live app, then click the install icon in the address bar.
+- Android Chrome: open the live app, tap the browser menu, then tap **Add to Home screen** or **Install app**.
+- iPhone/iPad Safari: open the live app, tap Share, then tap **Add to Home Screen**.
+
 ## Run
 
 ```sh
-python3 scripts/import_data.py
-python3 -m http.server 5173
+npm install
+npm run dev
 ```
 
-Open `http://localhost:5173`.
+Open the local URL printed by Vite.
+
+The app also works with VS Code Live Server at `http://127.0.0.1:5500/index.html`.
 
 ## Test
 
@@ -39,5 +53,7 @@ The import keeps the workbook untouched, writes public JSON under `public/data/`
 ## Notes
 
 The app uses hash routes so it can be hosted as static files without server-side routing. Search runs entirely in the browser after the JSON dataset loads, and the service worker caches app shell and data files for offline use after the first successful visit.
+
+GitHub Pages deploys automatically from `.github/workflows/deploy.yml` whenever changes are pushed to `main`.
 
 Note: the original Excel workbook containing raw source data has been removed from the repository to avoid publishing private data. If you need to re-generate the public JSON dataset, keep a local copy of `Places names of bhutan.xlsx` outside this repo and run `python3 scripts/import_data.py` locally.
