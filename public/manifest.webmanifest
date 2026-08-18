@@ -1,0 +1,19 @@
+{
+  "name": "འབྲུག་གི་ས་གནས་ཀྱི་མིང་།",
+  "short_name": "Bhutan Places",
+  "description": "Search standardized English and Dzongkha place names of Bhutan.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8f5ef",
+  "theme_color": "#7b1f27",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

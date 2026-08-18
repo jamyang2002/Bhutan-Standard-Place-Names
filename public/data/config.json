@@ -1,0 +1,18 @@
+{
+  "appName": "Bhutan Standard Place Names",
+  "appNameDz": "འབྲུག་གི་ས་གནས་ཀྱི་མིང་།",
+  "subtitle": "Standard English and Dzongkha Place Names of Bhutan",
+  "datasetVersion": 1787026829.9152255,
+  "generatedAt": "2026-08-18T08:50:59.341869+00:00",
+  "source": "Places names of bhutan.xlsx",
+  "stats": {
+    "usablePlaceNameRecords": 4093,
+    "dzongkhags": 20,
+    "gewogs": 202,
+    "chiwogs": 1027,
+    "villages": 4053,
+    "duplicateRecords": 0,
+    "searchableAliases": 56302,
+    "documentedVillageCorrections": 1889
+  }
+}

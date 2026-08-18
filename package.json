@@ -1,0 +1,19 @@
+{
+  "name": "bhutan-standard-place-names",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Offline-capable PWA for searching standardized Bhutan place names.",
+  "scripts": {
+    "import-data": "python3 scripts/import_data.py",
+    "test": "python3 -m unittest discover -s tests",
+    "dev": "python3 -m http.server 5173",
+    "build": "python3 scripts/import_data.py && python3 -m unittest discover -s tests"
+  },
+  "keywords": [
+    "bhutan",
+    "place-names",
+    "pwa",
+    "dzongkha"
+  ],
+  "license": "UNLICENSED"
+}
