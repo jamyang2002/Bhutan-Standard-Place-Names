@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Offline-capable PWA for searching standardized Bhutan place names.",
-  "homepage": "https://jamyang2002.github.io/bhutan-standard-place-names/",
+  "homepage": "https://jamyang2002.github.io/Bhutan-Standard-Place-Names/",
   "scripts": {
     "import-data": "python3 scripts/import_data.py",
     "test": "python3 -m unittest discover -s tests",

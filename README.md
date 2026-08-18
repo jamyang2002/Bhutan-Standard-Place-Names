@@ -4,7 +4,7 @@ Offline-capable web app for searching standardized English and Dzongkha place na
 
 ## Live App
 
-https://jamyang2002.github.io/bhutan-standard-place-names/
+https://jamyang2002.github.io/Bhutan-Standard-Place-Names/
 
 ## Install
 
