@@ -624,6 +624,18 @@ function bindSearchEvents() {
       input.classList.toggle("dz-script", hasDzScript(nextValue) || state.lang === "dz");
       setQuery(nextValue);
     };
+    // When Enter is pressed, push the query and surface results (useful on mobile)
+    input.onkeydown = (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const val = input.value || "";
+        setQuery(val, true);
+        const filterPanel = document.querySelector('.filter-panel');
+        if (filterPanel && filterPanel.hasAttribute('open')) filterPanel.removeAttribute('open');
+        const results = document.querySelector('#resultsMount');
+        if (results) results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
   }
   document.querySelectorAll("[data-search]").forEach((b) => b.addEventListener("click", () => setQuery(b.dataset.search)));
   document.querySelectorAll("[data-favorite]").forEach((b) => b.addEventListener("click", () => toggleFavorite(b.dataset.favorite)));

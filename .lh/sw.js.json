@@ -1,0 +1,18 @@
+{
+    "sourceFile": "sw.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1787052336331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1787052336331,
+            "name": "Commit-0",
+            "content": "const CACHE = \"bhutan-place-names-v5\";\nconst SCOPE_PATH = new URL(self.registration.scope).pathname.replace(/\\/$/, \"\");\nconst scoped = (path) => `${SCOPE_PATH}${path}`;\nconst ASSETS = [\n  scoped(\"/\"),\n  scoped(\"/index.html\"),\n  scoped(\"/src/app.js\"),\n  scoped(\"/src/styles.css\"),\n  scoped(\"/logo.png\"),\n  scoped(\"/Font/Joyig.ttf\"),\n  scoped(\"/Font/DDC_Uchen.ttf\"),\n  scoped(\"/manifest.webmanifest\"),\n  scoped(\"/icons/icon.svg\"),\n  scoped(\"/data/places.json\"),\n  scoped(\"/data/hierarchy.json\"),\n  scoped(\"/data/config.json\"),\n  scoped(\"/data/data-validation-report.json\")\n];\n\nself.addEventListener(\"install\", (event) => {\n  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(ASSETS)));\n  self.skipWaiting();\n});\n\nself.addEventListener(\"activate\", (event) => {\n  event.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((key) => key !== CACHE).map((key) => caches.delete(key)))));\n  self.clients.claim();\n});\n\nself.addEventListener(\"fetch\", (event) => {\n  if (event.request.method !== \"GET\") return;\n  event.respondWith(\n    caches.match(event.request).then((cached) => cached || fetch(event.request).then((response) => {\n      const copy = response.clone();\n      caches.open(CACHE).then((cache) => cache.put(event.request, copy));\n      return response;\n    }).catch(() => caches.match(scoped(\"/index.html\"))))\n  );\n});\n"
+        }
+    ]
+}

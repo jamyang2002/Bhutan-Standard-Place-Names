@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1787050734914,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1787052324798,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,14 @@\n // Serve public assets from the server root. Vite serves `public/` at `/`.\n const ASSET_BASE = location.pathname.endsWith(\"/\") ? location.pathname.slice(0, -1) : location.pathname.replace(/\\/[^/]*$/, \"\");\n+const BASE_URL = import.meta.env.BASE_URL || \"/\";\n const assetPath = (path) => {\n-  // If an absolute path is provided, return it as-is so public files resolve at the server root.\n-  if (path.startsWith(\"/\")) return path;\n+  // For absolute paths (starting with /), resolve them relative to Vite's BASE_URL\n+  if (path.startsWith(\"/\")) return `${BASE_URL.replace(/\\/$/, \"\")}${path}`;\n   return `${ASSET_BASE}${path}`;\n };\n-// Public data is served at `/data` (not `/public/data`) by Vite's dev/preview server.\n-const DATA_BASE = \"/data\";\n+// Public data is served at `${BASE_URL}data` (works in dev and when deployed under a subpath)\n+const DATA_BASE = `${BASE_URL}data`;\n const ROUTE_PREFIX = \"#\";\n const APP_TITLE_DZ = \"འབྲུག་གི་ས་གནས་ཀྱི་མིང་།\";\n const state = {\n   places: [],\n"
+                },
+                {
+                    "date": 1787071312284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n-// Serve public assets from the server root. Vite serves `public/` at `/`.\n+// Serve assets from the current static path, while still using Vite's base\n+// when the app is built or served through Vite.\n const ASSET_BASE = location.pathname.endsWith(\"/\") ? location.pathname.slice(0, -1) : location.pathname.replace(/\\/[^/]*$/, \"\");\n-const BASE_URL = import.meta.env.BASE_URL || \"/\";\n+const viteEnv = import.meta.env || {};\n+const BASE_URL = viteEnv.BASE_URL || `${ASSET_BASE || \"\"}/`;\n const assetPath = (path) => {\n-  // For absolute paths (starting with /), resolve them relative to Vite's BASE_URL\n   if (path.startsWith(\"/\")) return `${BASE_URL.replace(/\\/$/, \"\")}${path}`;\n   return `${ASSET_BASE}${path}`;\n };\n-// Public data is served at `${BASE_URL}data` (works in dev and when deployed under a subpath)\n-const DATA_BASE = `${BASE_URL}data`;\n+const DATA_BASE = viteEnv.BASE_URL ? `${BASE_URL}data` : `${ASSET_BASE}/public/data`;\n const ROUTE_PREFIX = \"#\";\n const APP_TITLE_DZ = \"འབྲུག་གི་ས་གནས་ཀྱི་མིང་།\";\n const state = {\n   places: [],\n@@ -623,8 +623,20 @@\n       const nextValue = e.target.value;\n       input.classList.toggle(\"dz-script\", hasDzScript(nextValue) || state.lang === \"dz\");\n       setQuery(nextValue);\n     };\n+    // When Enter is pressed, push the query and surface results (useful on mobile)\n+    input.onkeydown = (e) => {\n+      if (e.key === \"Enter\") {\n+        e.preventDefault();\n+        const val = input.value || \"\";\n+        setQuery(val, true);\n+        const filterPanel = document.querySelector('.filter-panel');\n+        if (filterPanel && filterPanel.hasAttribute('open')) filterPanel.removeAttribute('open');\n+        const results = document.querySelector('#resultsMount');\n+        if (results) results.scrollIntoView({ behavior: 'smooth', block: 'start' });\n+      }\n+    };\n   }\n   document.querySelectorAll(\"[data-search]\").forEach((b) => b.addEventListener(\"click\", () => setQuery(b.dataset.search)));\n   document.querySelectorAll(\"[data-favorite]\").forEach((b) => b.addEventListener(\"click\", () => toggleFavorite(b.dataset.favorite)));\n   document.querySelectorAll(\"[data-copy]\").forEach((b) => b.addEventListener(\"click\", () => {\n"
                 }
             ],
             "date": 1787050734914,
